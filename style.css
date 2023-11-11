@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Noto+Sans:wght@100&family=Poiret+One&family=Spirax&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: Poiret One;
+}
+
+nav {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  padding: 1vh 0;
+  background-color: rgba(50, 7, 68, 0.6);
+  display: flex;
+  justify-content: center;
+}
+
+nav>a {
+  font-family: Spirax;
+  margin: 0 5vw;
+  font-size: 5vh;
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: Spirax;
+  font-size: 10vh;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+section {
+  background-size: cover;
+  background-position: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-bottom: 2vh;
+  min-height: 200vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section> :nth-child(2) {
+  align-self: flex-start;
+}
+
+section> :nth-child(3) {
+  align-self: flex-end;
+}
+
+section> :nth-child(4) {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#row {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  font-size: 2.5vh;
+  padding: 20px;
+  width: 80%;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+#backgrund {
+  background-image: url('Backgrund.jpg');
+}
+
+/* Gemensamma stilar som gäller för alla sidor om de inte överskuggas */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #333;
+}
+
+/* Stilar som gäller för register.html */
+#registration-section {
+  background-color: rgba(241, 22, 22, 0.247);
+  /* Bakgrundsfärg för register.html */
+}
+
+/* Stilar som gäller för history.html */
+#history-section {
+  background-color: rgba(255, 255, 0, 0.247);
+  /* Bakgrundsfärg för history.html */
+}
+
+/* Stilar som gäller för game.html */
+#game-section {
+  background-color: #da8585;
+  /* Bakgrundsfärg för game.html */
+}
+
+/* Gemensamma stilar som gäller för båda sidorna */
+#playerSelection {
+  margin: 20px;
+}
+
+select,
+button {
+  padding: 10px;
+  margin: 5px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 2px;
+  background-color: #ffffff;
+}
+
+.cell:hover {
+  background-color: #eee;
+}
+
+#historyContainer {
+  margin-top: 20px;
+}
+
+
+/* Centrera texten och minska utrymmet mellan texterna i history.html */
+#history-section .match {
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+  /* Justera bredden efter behov */
+  text-align: center;
+  /* Centrera texten horisontellt */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#history-section .match p {
+  font-size: 1.8vh;
+  /* Justera textstorleken efter behov */
+  padding: 5px;
+  /* Minska utrymmet mellan texterna */
+  margin: 0;
+  /* Ta bort det vertikala avståndet mellan texterna */
+}
+
+.match {
+  background-color: #fff;
+  padding: 5px;
+  /* Minska padding för mindre mellanrum */
+  margin: 5px;
+  /* Minska mellanrum mellan matcherna */
+  border: none;
+  /* Ta bort rutan runt texten */
+  text-align: center;
+  /* Centrera texten */
+}
+
+.hide {
+  display: none;
+}
+
+.spacer {
+  height: 10px;
+  /* Justera höjden efter behov */
+}
+
+@media screen and (max-width: 500px) {
+  nav>a {
+    font-size: 3vh;
+  }
+
+  section> :nth-child(2) {
+    align-self: center;
+  }
+
+  section> :nth-child(3) {
+    display: none;
+  }
+}
