@@ -10,7 +10,8 @@
 <body id="registration-section">
   <a href="index.html" class="back-link">Tillbaka till startsidan</a>
   <h1>Registrera en ny användare</h1>
-  <input type="text" id="newPlayer" placeholder="Användarnamn">
+  <input type="text" id="newPlayer" autocomplete="off" placeholder="Användarnamn">
+  <button id="registerBtn" onclick="registerUser()">Registrera</button>
   <div id="registrationMessage"></div>
   <script src="script.js"></script>
 </body>
