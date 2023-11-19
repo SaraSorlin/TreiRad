@@ -5,8 +5,16 @@
 }
 
 body {
-  background-color: rgb(255, 255, 255);
-  font-family: Poiret One;
+  background-color: white;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+nav a:hover {
+  color: #ff00f2;
 }
 
 nav {
@@ -20,7 +28,7 @@ nav {
 }
 
 nav>a {
-  font-family: Spirax;
+  font-family: 'Spirax', cursive;
   margin: 0 5vw;
   font-size: 5vh;
   color: white;
@@ -28,9 +36,9 @@ nav>a {
 }
 
 h1 {
-  font-family: Spirax;
+  font-family: 'Spirax', cursive;
   font-size: 10vh;
-  color: rgb(255, 255, 255);
+  color: white;
   text-align: center;
 }
 
@@ -68,16 +76,24 @@ p {
   font-size: 2.5vh;
   padding: 20px;
   width: 80%;
-  color: rgb(0, 0, 0);
+  color: black;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
 }
 
 #backgrund {
   background-image: url('Backgrund.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-/* Gemensamma stilar som gäller för alla sidor om de inte överskuggas */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -89,25 +105,18 @@ h1 {
   color: #333;
 }
 
-/* Stilar som gäller för register.html */
 #registration-section {
   background-color: rgba(241, 22, 22, 0.247);
-  /* Bakgrundsfärg för register.html */
 }
 
-/* Stilar som gäller för history.html */
 #history-section {
   background-color: rgba(255, 255, 0, 0.247);
-  /* Bakgrundsfärg för history.html */
 }
 
-/* Stilar som gäller för game.html */
 #game-section {
   background-color: #da8585;
-  /* Bakgrundsfärg för game.html */
 }
 
-/* Gemensamma stilar som gäller för båda sidorna */
 #playerSelection {
   margin: 20px;
 }
@@ -149,15 +158,22 @@ button {
   margin-top: 20px;
 }
 
+#moveCounter {
+  font-size: 2.5vh;
+  padding: 20px;
+  width: 80%;
+  color: black;
+  background-color: #da8585;
+  text-align: center;
+  margin: 0 auto;
 
-/* Centrera texten och minska utrymmet mellan texterna i history.html */
+}
+
 #history-section .match {
   padding: 5px;
   margin: 5px;
   width: 100%;
-  /* Justera bredden efter behov */
   text-align: center;
-  /* Centrera texten horisontellt */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -166,23 +182,17 @@ button {
 
 #history-section .match p {
   font-size: 1.8vh;
-  /* Justera textstorleken efter behov */
   padding: 5px;
-  /* Minska utrymmet mellan texterna */
   margin: 0;
-  /* Ta bort det vertikala avståndet mellan texterna */
+
 }
 
 .match {
   background-color: #fff;
   padding: 5px;
-  /* Minska padding för mindre mellanrum */
   margin: 5px;
-  /* Minska mellanrum mellan matcherna */
   border: none;
-  /* Ta bort rutan runt texten */
   text-align: center;
-  /* Centrera texten */
 }
 
 .hide {
@@ -191,7 +201,6 @@ button {
 
 .spacer {
   height: 10px;
-  /* Justera höjden efter behov */
 }
 
 @media screen and (max-width: 500px) {
