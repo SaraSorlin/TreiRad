@@ -62,7 +62,26 @@ function updateUser(user) {
   }).then(response => response.json());
 }
 
+function updatePlayerSelections() {
+  fetchUsers().then(users => {
+    const player1Select = document.getElementById('player1');
+    const player2Select = document.getElementById('player2');
+    if (player1Select && player2Select) {
+      updateSelectElement(player1Select, users);
+      updateSelectElement(player2Select, users);
+    }
+    const userSelect = document.getElementById('userSelect');
+    if (userSelect) {
+      updateSelectElement(userSelect, users);
+    }
+  });
+}
 
+function updateSelectElement(selectElement, users) {
+  selectElement.innerHTML = users.map(user =>
+    `<option value="${user.username}">${user.username}</option>`
+  ).join('');
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('startGameBtn').addEventListener('click', startGame);

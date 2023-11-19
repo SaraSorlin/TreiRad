@@ -1,3 +1,14 @@
 {
-  "users": []
+  "users": [
+    {
+      "username": "hhh",
+      "matchHistory": [],
+      "id": 1
+    },
+    {
+      "username": "jj",
+      "matchHistory": [],
+      "id": 2
+    }
+  ]
 }
