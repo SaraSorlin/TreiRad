@@ -16,9 +16,15 @@
     <select id="player2"></select>
     <button id="startGameBtn">Starta Spel</button>
   </div>
+
+  <p id="moveCounter" style="display: none;">Antal drag: 0</p>
   <div id="boardContainer" class="hide"></div>
   <div id="board"></div>
   <script src="script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', updatePlayerSelections);
+  </script>
 </body>
 
 </html>
