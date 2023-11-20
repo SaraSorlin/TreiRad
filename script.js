@@ -195,6 +195,11 @@ function hasPlacedThreeMarkers(playerMark) {
 }
 
 
+function saveMatchResult(winner, moves) {
+
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('startGameBtn').addEventListener('click', startGame);
   document.getElementById('showHistoryBtn').addEventListener('click', showHistory);
