@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
   <meta charset="UTF-8">
@@ -17,6 +17,36 @@
   </div>
   <div id="historyContainer"></div>
   <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      updatePlayerSelections();
+
+      document.getElementById('showHistoryBtn').addEventListener('click', () => {
+        const selectedUser = document.getElementById('userSelect').value;
+        getUserMatchHistory(selectedUser);
+      });
+    });
+
+    function displayMatchHistory(matchHistory, selectedUser) {
+      const historyContainer = document.getElementById('historyContainer');
+      historyContainer.innerHTML = '';
+
+      matchHistory.forEach((match, index) => {
+        const matchDiv = document.createElement('div');
+        matchDiv.className = 'match';
+
+        const matchInfo = `
+          <p>Match ${index + 1}</p>
+          <p>Motståndare: ${match.player1 === selectedUser ? match.player2 : match.player1}</p>
+          <p>Vinnare: ${match.winner}</p>
+          <p>Antal drag: ${match.moves}</p>
+        `;
+
+        matchDiv.innerHTML = matchInfo;
+        historyContainer.appendChild(matchDiv);
+      });
+    }
+  </script>
 </body>
 
 </html>
