@@ -201,6 +201,24 @@ function selectMarkerToMove(index) {
 }
 
 function saveMatchResult(winner, moves) {
+  fetchUsers().then(users => {
+    const user1 = users.find(user => user.username === player1);
+    const user2 = users.find(user => user.username === player2);
+    if (user1 && user2) {
+      const matchResult = {
+        player1: player1,
+        player2: player2,
+        winner: winner,
+        moves: moves,
+      };
+      user1.matchHistory = [...(user1.matchHistory || []), matchResult];
+      user2.matchHistory = [...(user2.matchHistory || []), matchResult];
+
+      Promise.all([updateUser(user1), updateUser(user2)])
+        .then(() => console.log("Matchhistoriken uppdaterad"))
+        .catch(err => console.error("Fel vid uppdatering av matchhistorik", err));
+    }
+  });
 }
 
 
