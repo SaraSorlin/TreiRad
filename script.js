@@ -195,8 +195,8 @@ function hasPlacedThreeMarkers(playerMark) {
 }
 
 
-function saveMatchResult(winner, moves) {
 
+function saveMatchResult(winner, moves) {
 }
 
 
