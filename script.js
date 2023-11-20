@@ -221,6 +221,28 @@ function saveMatchResult(winner, moves) {
   });
 }
 
+function showHistory() {
+  const selectedUser = document.getElementById('userSelect').value;
+  if (!selectedUser) {
+    alert('Välj en användare för att visa matchhistorik.');
+    return;
+  }
+
+  getUserMatchHistory(selectedUser);
+}
+
+function getUserMatchHistory(username) {
+  fetchUsers().then(users => {
+    const user = users.find(user => user.username === username);
+    if (!user) {
+      alert('Användaren hittades inte.');
+      return;
+    }
+
+    const historyContainer = document.getElementById('historyContainer');
+    displayMatchHistory(user.matchHistory, username);
+  });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('startGameBtn').addEventListener('click', startGame);

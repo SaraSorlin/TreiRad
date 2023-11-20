@@ -1,43 +1,33 @@
 {
   "users": [
     {
-      "username": "hhh",
-      "matchHistory": [],
+      "username": "Sara",
+      "matchHistory": [
+        {
+          "player1": "Sara",
+          "player2": "Minella",
+          "winner": "Sara",
+          "moves": 5
+        }
+      ],
       "id": 1
-    },
-    {
-      "username": "jj",
-      "matchHistory": [],
-      "id": 2
-    },
-    {
-      "username": "Gurra",
-      "matchHistory": [],
-      "id": 3
     },
     {
       "username": "Minella",
       "matchHistory": [
         {
-          "player1": "Minella",
-          "player2": "Sara",
+          "player1": "Sara",
+          "player2": "Minella",
           "winner": "Sara",
-          "moves": 12
+          "moves": 5
         }
       ],
-      "id": 4
+      "id": 2
     },
     {
-      "username": "Sara",
-      "matchHistory": [
-        {
-          "player1": "Minella",
-          "player2": "Sara",
-          "winner": "Sara",
-          "moves": 12
-        }
-      ],
-      "id": 5
+      "username": "Milton",
+      "matchHistory": [],
+      "id": 3
     }
   ]
 }
