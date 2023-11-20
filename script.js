@@ -190,6 +190,11 @@ function updateBoard() {
   });
 }
 
+function hasPlacedThreeMarkers(playerMark) {
+  return board.filter(mark => mark === playerMark).length === 3;
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('startGameBtn').addEventListener('click', startGame);
   document.getElementById('showHistoryBtn').addEventListener('click', showHistory);
