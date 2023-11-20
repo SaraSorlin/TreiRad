@@ -83,6 +83,25 @@ function updateSelectElement(selectElement, users) {
   ).join('');
 }
 
+function startGame() {
+  player1 = document.getElementById('player1').value;
+  player2 = document.getElementById('player2').value;
+  if (!player1 || !player2 || player1 === player2) {
+    alert('Välj två olika spelare för att starta spelet.');
+    return;
+  }
+  currentPlayer = player1Mark;
+  board = ['', '', '', '', '', '', '', '', ''];
+  gameActive = true;
+  movesCount = 0;
+  movingPhase = false;
+  selectedMarkerIndex = -1;
+  gameOver = false;
+  document.getElementById('playerSelection').style.display = 'none';
+  displayBoard();
+  document.getElementById('moveCounter').style.display = 'block';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('startGameBtn').addEventListener('click', startGame);
   document.getElementById('showHistoryBtn').addEventListener('click', showHistory);
