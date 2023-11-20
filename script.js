@@ -183,8 +183,11 @@ function checkForWinner() {
 }
 
 function updateBoard() {
+  const cells = document.querySelectorAll('#board .cell');
+  cells.forEach((cell, index) => {
+    cell.textContent = board[index];
+  });
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('startGameBtn').addEventListener('click', startGame);
