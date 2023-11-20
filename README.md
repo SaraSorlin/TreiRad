@@ -15,7 +15,9 @@
  Get-ExecutionPolicy
 
  Set-ExecutionPolicy RemoteSigned
+
  try run:
+ 
 "json-server users.json --static ./" again
 
 ## The game will then default run on bellow URL!, Port 3000 is default port the program expect it to be that for the code to work
