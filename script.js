@@ -120,6 +120,67 @@ function displayBoard() {
   }
 }
 
+function makeMove(index) {
+  if (!gameActive || gameOver) return;
+
+  if (movingPhase) {
+    if (selectedMarkerIndex === -1 && board[index] === currentPlayer) {
+      selectMarkerToMove(index);
+    } else if (board[index] === '' && selectedMarkerIndex !== -1) {
+      board[selectedMarkerIndex] = '';
+      board[index] = currentPlayer;
+      selectedMarkerIndex = -1;
+      movesCount++;
+      currentPlayer = currentPlayer === player1Mark ? player2Mark : player1Mark;
+    }
+  } else {
+    if (board[index] === '') {
+      board[index] = currentPlayer;
+      movesCount++;
+      if (currentPlayer === player2Mark && movesCount === 6) {
+        movingPhase = true;
+      }
+      currentPlayer = currentPlayer === player1Mark ? player2Mark : player1Mark;
+    }
+  }
+
+  updateBoard();
+  if (!gameOver) {
+    checkForWinner();
+  }
+  displayBoard();
+  document.getElementById('moveCounter').textContent = 'Antal drag: ' + movesCount;
+}
+
+function checkForWinner() {
+  const winningCombinations = [
+    [0, 1, 2], [3, 4, 5], [6, 7, 8],
+    [0, 3, 6], [1, 4, 7], [2, 5, 8],
+    [0, 4, 8], [2, 4, 6]
+  ];
+
+  for (let i = 0; i < winningCombinations.length; i++) {
+    const [a, b, c] = winningCombinations[i];
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+      gameActive = false;
+      gameOver = true;
+      const winnerMark = board[a];
+      const winner = winnerMark === player1Mark ? player1 : player2;
+      setTimeout(() => alert(`Spelare ${winner} vinner!`), 10);
+      saveMatchResult(winner, movesCount);
+      return;
+    }
+  }
+
+  let roundDraw = !board.includes('');
+  if (roundDraw) {
+    gameActive = false;
+    gameOver = true;
+    setTimeout(() => alert('Spelet är oavgjort!'), 10);
+    saveMatchResult('Ingen', movesCount);
+    return;
+  }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('startGameBtn').addEventListener('click', startGame);
