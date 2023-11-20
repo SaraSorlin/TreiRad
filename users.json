@@ -17,12 +17,26 @@
     },
     {
       "username": "Minella",
-      "matchHistory": [],
+      "matchHistory": [
+        {
+          "player1": "Minella",
+          "player2": "Sara",
+          "winner": "Sara",
+          "moves": 12
+        }
+      ],
       "id": 4
     },
     {
       "username": "Sara",
-      "matchHistory": [],
+      "matchHistory": [
+        {
+          "player1": "Minella",
+          "player2": "Sara",
+          "winner": "Sara",
+          "moves": 12
+        }
+      ],
       "id": 5
     }
   ]
