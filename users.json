@@ -8,6 +8,12 @@
           "player2": "Minella",
           "winner": "Sara",
           "moves": 5
+        },
+        {
+          "player1": "Sara",
+          "player2": "Minella",
+          "winner": "Sara",
+          "moves": 11
         }
       ],
       "id": 1
@@ -20,14 +26,51 @@
           "player2": "Minella",
           "winner": "Sara",
           "moves": 5
+        },
+        {
+          "player1": "Sara",
+          "player2": "Minella",
+          "winner": "Sara",
+          "moves": 11
         }
       ],
       "id": 2
     },
     {
       "username": "Milton",
-      "matchHistory": [],
+      "matchHistory": [
+        {
+          "player1": "kalle",
+          "player2": "Milton",
+          "winner": "Milton",
+          "moves": 8
+        },
+        {
+          "player1": "kalle",
+          "player2": "Milton",
+          "winner": "kalle",
+          "moves": 5
+        }
+      ],
       "id": 3
+    },
+    {
+      "username": "kalle",
+      "matchHistory": [
+        {
+          "player1": "kalle",
+          "player2": "Milton",
+          "winner": "Milton",
+          "moves": 8
+        },
+        {
+          "player1": "kalle",
+          "player2": "Milton",
+          "winner": "kalle",
+          "moves": 5
+        }
+      ],
+      "id": 4
     }
   ]
 }

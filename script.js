@@ -186,10 +186,9 @@ function updateBoard() {
   const cells = document.querySelectorAll('#board .cell');
   cells.forEach((cell, index) => {
     cell.textContent = board[index];
-    checkForWinner();
   });
+  checkForWinner();
 }
-
 function hasPlacedThreeMarkers(playerMark) {
   return board.filter(mark => mark === playerMark).length === 3;
 }
@@ -250,4 +249,3 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('registerBtn').addEventListener('click', registerUser);
   updatePlayerSelections();
 });
-
