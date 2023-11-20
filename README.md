@@ -13,8 +13,10 @@
 
  If a error message displays you might need to run Powershell as admin and allow scripts to be exceuted if sow open Powershell as admin and type:
  Get-ExecutionPolicy
+
  Set-ExecutionPolicy RemoteSigned
- try run "json-server users.json --static ./" again
+ try run:
+"json-server users.json --static ./" again
 
 ## The game will then default run on bellow URL!, Port 3000 is default port the program expect it to be that for the code to work
 http://localhost:3000/
