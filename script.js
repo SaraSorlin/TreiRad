@@ -182,6 +182,10 @@ function checkForWinner() {
   }
 }
 
+function updateBoard() {
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('startGameBtn').addEventListener('click', startGame);
   document.getElementById('showHistoryBtn').addEventListener('click', showHistory);
