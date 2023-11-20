@@ -102,6 +102,25 @@ function startGame() {
   document.getElementById('moveCounter').style.display = 'block';
 }
 
+function displayBoard() {
+  const boardContainer = document.getElementById('board') || document.createElement('div');
+  boardContainer.id = 'board';
+  boardContainer.innerHTML = '';
+
+  board.forEach((cell, index) => {
+    const cellDiv = document.createElement('div');
+    cellDiv.className = 'cell';
+    cellDiv.textContent = cell;
+    cellDiv.addEventListener('click', function () { makeMove(index); });
+    boardContainer.appendChild(cellDiv);
+  });
+
+  if (!document.getElementById('board')) {
+    document.body.appendChild(boardContainer);
+  }
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('startGameBtn').addEventListener('click', startGame);
   document.getElementById('showHistoryBtn').addEventListener('click', showHistory);
