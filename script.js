@@ -194,7 +194,11 @@ function hasPlacedThreeMarkers(playerMark) {
   return board.filter(mark => mark === playerMark).length === 3;
 }
 
-
+function selectMarkerToMove(index) {
+  if (board[index] === currentPlayer) {
+    selectedMarkerIndex = index;
+  }
+}
 
 function saveMatchResult(winner, moves) {
 }
