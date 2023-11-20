@@ -1,52 +1,28 @@
 {
   "users": [
     {
-      "username": "Kalle",
-      "matchHistory": [
-        {
-          "player1": "Kalle",
-          "player2": "Sara",
-          "winner": "Kalle",
-          "moves": 9
-        },
-        {
-          "player1": "Kalle",
-          "player2": "Sara",
-          "winner": "Kalle",
-          "moves": 5
-        }
-      ],
-      "id": 1
-    },
-    {
       "username": "Sara",
       "matchHistory": [
         {
-          "player1": "Kalle",
-          "player2": "Sara",
-          "winner": "Kalle",
+          "player1": "Sara",
+          "player2": "Minella",
+          "winner": "Sara",
           "moves": 9
         },
         {
           "player1": "Sara",
           "player2": "Minella",
           "winner": "Minella",
-          "moves": 10
+          "moves": 8
         },
         {
-          "player1": "Kalle",
-          "player2": "Sara",
-          "winner": "Kalle",
+          "player1": "Sara",
+          "player2": "Milton",
+          "winner": "Sara",
           "moves": 5
-        },
-        {
-          "player1": "Minella",
-          "player2": "Sara",
-          "winner": "Minella",
-          "moves": 9
         }
       ],
-      "id": 2
+      "id": 1
     },
     {
       "username": "Minella",
@@ -54,21 +30,46 @@
         {
           "player1": "Sara",
           "player2": "Minella",
-          "winner": "Minella",
-          "moves": 10
+          "winner": "Sara",
+          "moves": 9
         },
         {
-          "player1": "Minella",
-          "player2": "Sara",
+          "player1": "Sara",
+          "player2": "Minella",
           "winner": "Minella",
-          "moves": 9
+          "moves": 8
+        },
+        {
+          "player1": "Gurra",
+          "player2": "Minella",
+          "winner": "Gurra",
+          "moves": 17
+        }
+      ],
+      "id": 2
+    },
+    {
+      "username": "Milton",
+      "matchHistory": [
+        {
+          "player1": "Sara",
+          "player2": "Milton",
+          "winner": "Sara",
+          "moves": 5
         }
       ],
       "id": 3
     },
     {
-      "username": "kingen",
-      "matchHistory": [],
+      "username": "Gurra",
+      "matchHistory": [
+        {
+          "player1": "Gurra",
+          "player2": "Minella",
+          "winner": "Gurra",
+          "moves": 17
+        }
+      ],
       "id": 4
     }
   ]
